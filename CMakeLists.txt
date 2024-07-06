@@ -21,6 +21,35 @@ endif()
 
 add_subdirectory(thirdparty/glad)
 
-add_executable(game src/main.cpp)
+include_directories(${PROJECT_SOURCE_DIR}/src)
+
+add_executable(game
+  src/main.cpp
+)
+
+add_executable(1_rectangle
+  src/1_rectangle.cpp
+)
+
+add_executable(2_double_triangle
+  src/2_double_triangle.cpp
+)
+
+add_executable(3_double_triangle_multiple_VAO
+  src/3_double_triangle_multiple_VAO.cpp
+)
+
+add_executable(4_double_triangle_different_color
+  src/4_double_triangle_different_color.cpp
+)
+
+add_executable(5_uniform_dynamic_color
+  src/5_uniform_dynamic_color.cpp
+)
 
 target_link_libraries(game PRIVATE glfw glad)
+target_link_libraries(1_rectangle PRIVATE glfw glad)
+target_link_libraries(2_double_triangle PRIVATE glfw glad)
+target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad)
+target_link_libraries(4_double_triangle_different_color PRIVATE glfw glad)
+target_link_libraries(5_uniform_dynamic_color PRIVATE glfw glad)
