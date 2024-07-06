@@ -92,7 +92,7 @@ int main() {
   glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
   if (!success) {
     glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-    std::cout << "ERROR::SHADER::LINKING\n" << infoLog << std::endl;
+    std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n" << infoLog << std::endl;
   }
 
   // Clean shader from memory after linked it to the program object. Not needed anymore
@@ -158,7 +158,7 @@ int main() {
 
   // Specify how OpenGL should interpret the vertex buffer data
   // The first argument specify the id of the vertex shader attribute (our case location = 0)
-  // The second argument specifies the size of the vertex attributes (3 value)
+  // The second argument specifies the size of the vertex attributes (3 value/dimension)
   // The third argument specifies the type of the data which is GL_FLOAT (a vec* in GLSL consists of floating point values)
   // The fourth argument specifies if we want the data to be normalized.
   // The fifth argument is known as the stride and tells us the space between consecutive vertex attributes. (our case 3 float position)
