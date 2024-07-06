@@ -51,27 +51,37 @@ int main() {
 
   unsigned int shaderProgram = createShaderProgram();
 
-  float vertices[] = {
+  float leftTriangle[] = {
     // Left triangle
     -0.9f, -0.5f, 0.0f, // left vertex
     -0.1f, -0.5f, 0.0f, // right vertex
     -0.5f, 0.5f, 0.0f, // right vertex
+  };
+
+  float rightTriangle[] = {
     // Right triangle
     0.1f, -0.5f, 0.0f, // left vertex
     0.9f, -0.5f, 0.0f, // right vertex
     0.5f, 0.5f, 0.0f // right vertex
   };
 
-  unsigned int VAO, VBO;
+  unsigned int VAOs[2];
+  unsigned int VBOs[2];
 
-  glGenVertexArrays(1, &VAO);
-  glGenBuffers(1, &VBO);
+  glGenVertexArrays(2, VAOs); // Generating 2 vertex arrays
+  glGenBuffers(2, VBOs); // Generate 2 vertex buffers
 
-  glBindVertexArray(VAO);
+  glBindVertexArray(VAOs[0]); // Bind the first vertex array
 
-  glBindBuffer(GL_ARRAY_BUFFER, VBO);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+  glBindBuffer(GL_ARRAY_BUFFER, VBOs[0]); // Bing the first vertex buffer to the bound vertex array
+  glBufferData(GL_ARRAY_BUFFER, sizeof(leftTriangle), leftTriangle, GL_STATIC_DRAW); // Allocate the leftTriangle vertices
+  glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0); // Assign vertex attribute pointer to the bound vertex array
+  glEnableVertexAttribArray(0);
 
+  glBindVertexArray(VAOs[1]);// Bind the second vertex array
+
+  glBindBuffer(GL_ARRAY_BUFFER, VBOs[1]);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(rightTriangle), rightTriangle, GL_STATIC_DRAW);
   glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
   glEnableVertexAttribArray(0);
 
@@ -82,15 +92,17 @@ int main() {
     glClear(GL_COLOR_BUFFER_BIT);
 
     glUseProgram(shaderProgram);
-    glBindVertexArray(VAO);
-    glDrawArrays(GL_TRIANGLES, 0, 6);
+    glBindVertexArray(VAOs[0]); // Re bind the first array
+    glDrawArrays(GL_TRIANGLES, 0, 3); // Draw the first array
+    glBindVertexArray(VAOs[1]); // Re bind the second array
+    glDrawArrays(GL_TRIANGLES, 0, 3); // Draw the second array
 
     glfwSwapBuffers(window);
     glfwPollEvents();
   }
 
-  glDeleteVertexArrays(1, &VAO);
-  glDeleteBuffers(1, &VBO);
+  glDeleteVertexArrays(2, VAOs);
+  glDeleteBuffers(2, VBOs);
   glDeleteProgram(shaderProgram);
 
   glfwTerminate();
