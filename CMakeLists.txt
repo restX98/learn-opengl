@@ -26,6 +26,7 @@ if(NOT glfw_POPULATED)
 endif()
 
 add_subdirectory(thirdparty/glad)
+add_subdirectory(thirdparty/stb_image)
 
 
 add_executable(1_rectangle
@@ -52,28 +53,20 @@ add_executable(6_shaders
   src/6_shaders.cpp
 )
 
-target_link_libraries(1_rectangle PRIVATE glfw glad)
-target_link_libraries(2_double_triangle PRIVATE glfw glad)
-target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad)
-target_link_libraries(4_double_triangle_different_color PRIVATE glfw glad)
-target_link_libraries(5_uniform_dynamic_color PRIVATE glfw glad)
-target_link_libraries(6_shaders PRIVATE glfw glad)
-
-# copy shader files to build directory
-file(GLOB SHADERS
-  "src/shaders/*.vert"
-  "src/shaders/*.tesc"
-  "src/shaders/*.tese"
-  "src/shaders/*.geom"
-  "src/shaders/*.frag"
-  "src/shaders/*.comp"
+add_executable(7_textures
+  src/7_textures.cpp
 )
 
-foreach(SHADER ${SHADERS})
-  add_custom_command(TARGET 6_shaders PRE_LINK
-    COMMAND ${CMAKE_COMMAND} -E copy
-    ${SHADER} $<TARGET_FILE_DIR:6_shaders>
-  )
-endforeach(SHADER)
+target_link_libraries(1_rectangle PRIVATE glfw glad )
+target_link_libraries(2_double_triangle PRIVATE glfw glad )
+target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad )
+target_link_libraries(4_double_triangle_different_color PRIVATE glfw glad )
+target_link_libraries(5_uniform_dynamic_color PRIVATE glfw glad )
+target_link_libraries(6_shaders PRIVATE glfw glad )
+target_link_libraries(7_textures PRIVATE glfw glad stb_image)
+
+target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(7_textures PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
