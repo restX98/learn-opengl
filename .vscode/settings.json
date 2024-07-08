@@ -48,6 +48,15 @@
     "typeinfo": "cpp",
     "fstream": "cpp",
     "sstream": "cpp",
-    "glad.h": "c"
+    "glad.h": "c",
+    "charconv": "cpp",
+    "chrono": "cpp",
+    "cstring": "cpp",
+    "ctime": "cpp",
+    "ratio": "cpp",
+    "format": "cpp",
+    "iomanip": "cpp",
+    "span": "cpp",
+    "variant": "cpp"
   }
 }
