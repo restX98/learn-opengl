@@ -68,19 +68,26 @@ add_executable(8_transformations
   src/8_transformations.cpp
 )
 
+add_executable(9_coordinate_system
+  src/9_coordinate_system.cpp
+)
+
 target_link_libraries(1_rectangle PRIVATE glfw glad )
 target_link_libraries(2_double_triangle PRIVATE glfw glad )
 target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad )
 target_link_libraries(4_double_triangle_different_color PRIVATE glfw glad )
 target_link_libraries(5_uniform_dynamic_color PRIVATE glfw glad )
-target_link_libraries(6_shaders PRIVATE glfw glad )
-target_link_libraries(7_textures PRIVATE glfw glad stb_image)
-target_link_libraries(8_transformations PRIVATE glfw glad stb_image glm::glm)
+target_link_libraries(6_shaders PRIVATE glfw glad  glm::glm )
+target_link_libraries(7_textures PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(8_transformations PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(9_coordinate_system PRIVATE glfw glad stb_image glm::glm )
 
 target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(7_textures PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(8_transformations PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(8_transformations PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(9_coordinate_system PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(9_coordinate_system PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
