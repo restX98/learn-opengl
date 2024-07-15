@@ -76,6 +76,10 @@ add_executable(10_camera
   src/10_camera.cpp
 )
 
+add_executable(11_colors
+  src/11_colors.cpp
+)
+
 target_link_libraries(1_rectangle PRIVATE glfw glad )
 target_link_libraries(2_double_triangle PRIVATE glfw glad )
 target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad )
@@ -86,6 +90,7 @@ target_link_libraries(7_textures PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(8_transformations PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(9_coordinate_system PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(10_camera PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(11_colors PRIVATE glfw glad stb_image glm::glm )
 
 target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -96,5 +101,7 @@ target_compile_definitions(9_coordinate_system PUBLIC SHADERS_PATH="${CMAKE_CURR
 target_compile_definitions(9_coordinate_system PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(10_camera PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(10_camera PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(11_colors PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(11_colors PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
