@@ -74,7 +74,7 @@ int main() {
 
   // build and compile shaders
   // -------------------------
-  Shader ourShader(SHADERS_PATH "13_shader.vert", SHADERS_PATH "13_shader.frag");
+  Shader ourShader(SHADERS_PATH "15_shader.vert", SHADERS_PATH "15_shader.frag");
 
   // load models
   // -----------

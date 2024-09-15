@@ -91,8 +91,8 @@ add_executable(12_lighting_maps
   src/12_lighting_maps.cpp
 )
 
-add_executable(13_assimp
-  src/13_assimp.cpp
+add_executable(15_assimp
+  src/15_assimp.cpp
 )
 
 target_link_libraries(1_rectangle PRIVATE glfw glad )
@@ -107,7 +107,7 @@ target_link_libraries(9_coordinate_system PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(10_camera PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(11_colors PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(12_lighting_maps PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(13_assimp PRIVATE glfw glad stb_image glm::glm assimp )
+target_link_libraries(15_assimp PRIVATE glfw glad stb_image glm::glm assimp )
 
 target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -122,7 +122,7 @@ target_compile_definitions(11_colors PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE
 target_compile_definitions(11_colors PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(12_lighting_maps PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(12_lighting_maps PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(13_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(13_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(15_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(15_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
