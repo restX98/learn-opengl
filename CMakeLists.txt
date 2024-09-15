@@ -103,6 +103,10 @@ add_executable(13_lighting_caster__spotlight
   src/13_lighting_caster__spotlight.cpp
 )
 
+add_executable(14_multiple_lights
+  src/14_multiple_lights.cpp
+)
+
 add_executable(15_assimp
   src/15_assimp.cpp
 )
@@ -122,7 +126,7 @@ target_link_libraries(12_lighting_maps PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(13_lighting_caster__directional_light PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(13_lighting_caster__point_light PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(13_lighting_caster__spotlight PRIVATE glfw glad stb_image glm::glm )
-
+target_link_libraries(14_multiple_lights PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(15_assimp PRIVATE glfw glad stb_image glm::glm assimp )
 
 target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -144,7 +148,8 @@ target_compile_definitions(13_lighting_caster__point_light PUBLIC SHADERS_PATH="
 target_compile_definitions(13_lighting_caster__point_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(13_lighting_caster__spotlight PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(13_lighting_caster__spotlight PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-
+target_compile_definitions(14_multiple_lights PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(14_multiple_lights PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(15_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(15_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
