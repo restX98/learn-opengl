@@ -91,6 +91,18 @@ add_executable(12_lighting_maps
   src/12_lighting_maps.cpp
 )
 
+add_executable(13_lighting_caster__directional_light
+  src/13_lighting_caster__directional_light.cpp
+)
+
+add_executable(13_lighting_caster__point_light
+  src/13_lighting_caster__point_light.cpp
+)
+
+add_executable(13_lighting_caster__spotlight
+  src/13_lighting_caster__spotlight.cpp
+)
+
 add_executable(15_assimp
   src/15_assimp.cpp
 )
@@ -107,6 +119,10 @@ target_link_libraries(9_coordinate_system PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(10_camera PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(11_colors PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(12_lighting_maps PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(13_lighting_caster__directional_light PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(13_lighting_caster__point_light PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(13_lighting_caster__spotlight PRIVATE glfw glad stb_image glm::glm )
+
 target_link_libraries(15_assimp PRIVATE glfw glad stb_image glm::glm assimp )
 
 target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -122,6 +138,13 @@ target_compile_definitions(11_colors PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE
 target_compile_definitions(11_colors PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(12_lighting_maps PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(12_lighting_maps PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(13_lighting_caster__directional_light PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(13_lighting_caster__directional_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(13_lighting_caster__point_light PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(13_lighting_caster__point_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(13_lighting_caster__spotlight PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(13_lighting_caster__spotlight PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+
 target_compile_definitions(15_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(15_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
