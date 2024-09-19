@@ -43,128 +43,128 @@ add_subdirectory(thirdparty/glad)
 add_subdirectory(thirdparty/stb_image)
 
 
-add_executable(1_rectangle
-  src/1_rectangle.cpp
+add_executable(1_1_rectangle
+  src/1_getting_started/1_rectangle.cpp
 )
 
-add_executable(2_double_triangle
-  src/2_double_triangle.cpp
+add_executable(1_2_double_triangle
+  src/1_getting_started/2_double_triangle.cpp
 )
 
-add_executable(3_double_triangle_multiple_VAO
-  src/3_double_triangle_multiple_VAO.cpp
+add_executable(1_3_double_triangle_multiple_VAO
+  src/1_getting_started/3_double_triangle_multiple_VAO.cpp
 )
 
-add_executable(4_double_triangle_different_color
-  src/4_double_triangle_different_color.cpp
+add_executable(1_4_double_triangle_different_color
+  src/1_getting_started/4_double_triangle_different_color.cpp
 )
 
-add_executable(5_uniform_dynamic_color
-  src/5_uniform_dynamic_color.cpp
+add_executable(1_5_uniform_dynamic_color
+  src/1_getting_started/5_uniform_dynamic_color.cpp
 )
 
-add_executable(6_shaders
-  src/6_shaders.cpp
+add_executable(1_6_shaders
+  src/1_getting_started/6_shaders.cpp
 )
 
-add_executable(7_textures
-  src/7_textures.cpp
+add_executable(1_7_textures
+  src/1_getting_started/7_textures.cpp
 )
 
-add_executable(8_transformations
-  src/8_transformations.cpp
+add_executable(1_8_transformations
+  src/1_getting_started/8_transformations.cpp
 )
 
-add_executable(9_coordinate_system
-  src/9_coordinate_system.cpp
+add_executable(1_9_coordinate_system
+  src/1_getting_started/9_coordinate_system.cpp
 )
 
-add_executable(10_camera
-  src/10_camera.cpp
+add_executable(1_10_camera
+  src/1_getting_started/10_camera.cpp
 )
 
-add_executable(11_colors
-  src/11_colors.cpp
+add_executable(2_1_colors
+  src/2_lighting/1_colors.cpp
 )
 
-add_executable(12_lighting_maps
-  src/12_lighting_maps.cpp
+add_executable(2_2_lighting_maps
+  src/2_lighting/2_lighting_maps.cpp
 )
 
-add_executable(13_lighting_caster__directional_light
-  src/13_lighting_caster__directional_light.cpp
+add_executable(2_3_lighting_caster__directional_light
+  src/2_lighting/3_lighting_caster__directional_light.cpp
 )
 
-add_executable(13_lighting_caster__point_light
-  src/13_lighting_caster__point_light.cpp
+add_executable(2_3_lighting_caster__point_light
+  src/2_lighting/3_lighting_caster__point_light.cpp
 )
 
-add_executable(13_lighting_caster__spotlight
-  src/13_lighting_caster__spotlight.cpp
+add_executable(2_3_lighting_caster__spotlight
+  src/2_lighting/3_lighting_caster__spotlight.cpp
 )
 
-add_executable(14_multiple_lights
-  src/14_multiple_lights.cpp
+add_executable(2_4_multiple_lights
+  src/2_lighting/4_multiple_lights.cpp
 )
 
-add_executable(15_assimp
-  src/15_assimp.cpp
+add_executable(3_1_assimp
+  src/3_advanced_opengl/1_assimp.cpp
 )
 
-add_executable(16_depth_testing
-  src/16_depth_testing.cpp
+add_executable(3_2_depth_testing
+  src/3_advanced_opengl/2_depth_testing.cpp
 )
 
-add_executable(17_stencil_testing
-  src/17_stencil_testing.cpp
+add_executable(3_3_stencil_testing
+  src/3_advanced_opengl/3_stencil_testing.cpp
 )
 
-target_link_libraries(1_rectangle PRIVATE glfw glad )
-target_link_libraries(2_double_triangle PRIVATE glfw glad )
-target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad )
-target_link_libraries(4_double_triangle_different_color PRIVATE glfw glad )
-target_link_libraries(5_uniform_dynamic_color PRIVATE glfw glad )
-target_link_libraries(6_shaders PRIVATE glfw glad  glm::glm )
-target_link_libraries(7_textures PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(8_transformations PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(9_coordinate_system PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(10_camera PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(11_colors PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(12_lighting_maps PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(13_lighting_caster__directional_light PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(13_lighting_caster__point_light PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(13_lighting_caster__spotlight PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(14_multiple_lights PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(15_assimp PRIVATE glfw glad stb_image glm::glm assimp )
-target_link_libraries(16_depth_testing PRIVATE glfw glad stb_image glm::glm )
-target_link_libraries(17_stencil_testing PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(1_1_rectangle PRIVATE glfw glad )
+target_link_libraries(1_2_double_triangle PRIVATE glfw glad )
+target_link_libraries(1_3_double_triangle_multiple_VAO PRIVATE glfw glad )
+target_link_libraries(1_4_double_triangle_different_color PRIVATE glfw glad )
+target_link_libraries(1_5_uniform_dynamic_color PRIVATE glfw glad )
+target_link_libraries(1_6_shaders PRIVATE glfw glad  glm::glm )
+target_link_libraries(1_7_textures PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(1_8_transformations PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(1_9_coordinate_system PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(1_10_camera PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(2_1_colors PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(2_2_lighting_maps PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(2_3_lighting_caster__directional_light PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(2_3_lighting_caster__point_light PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(2_3_lighting_caster__spotlight PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(2_4_multiple_lights PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(3_1_assimp PRIVATE glfw glad stb_image glm::glm assimp )
+target_link_libraries(3_2_depth_testing PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(3_3_stencil_testing PRIVATE glfw glad stb_image glm::glm )
 
-target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(7_textures PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(8_transformations PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(8_transformations PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(9_coordinate_system PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(9_coordinate_system PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(10_camera PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(10_camera PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(11_colors PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(11_colors PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(12_lighting_maps PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(12_lighting_maps PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(13_lighting_caster__directional_light PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(13_lighting_caster__directional_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(13_lighting_caster__point_light PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(13_lighting_caster__point_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(13_lighting_caster__spotlight PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(13_lighting_caster__spotlight PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(14_multiple_lights PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(14_multiple_lights PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(15_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(15_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(16_depth_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(16_depth_testing PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
-target_compile_definitions(17_stencil_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
-target_compile_definitions(17_stencil_testing PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(1_6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(1_7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(1_7_textures PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(1_8_transformations PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(1_8_transformations PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(1_9_coordinate_system PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(1_9_coordinate_system PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(1_10_camera PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(1_10_camera PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(2_1_colors PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(2_1_colors PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(2_2_lighting_maps PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(2_2_lighting_maps PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(2_3_lighting_caster__directional_light PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(2_3_lighting_caster__directional_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(2_3_lighting_caster__point_light PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(2_3_lighting_caster__point_light PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(2_3_lighting_caster__spotlight PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(2_3_lighting_caster__spotlight PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(2_4_multiple_lights PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(2_4_multiple_lights PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(3_1_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(3_1_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(3_2_depth_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(3_2_depth_testing PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(3_3_stencil_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(3_3_stencil_testing PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
