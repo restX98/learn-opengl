@@ -115,6 +115,10 @@ add_executable(16_depth_testing
   src/16_depth_testing.cpp
 )
 
+add_executable(17_stencil_testing
+  src/17_stencil_testing.cpp
+)
+
 target_link_libraries(1_rectangle PRIVATE glfw glad )
 target_link_libraries(2_double_triangle PRIVATE glfw glad )
 target_link_libraries(3_double_triangle_multiple_VAO PRIVATE glfw glad )
@@ -133,6 +137,7 @@ target_link_libraries(13_lighting_caster__spotlight PRIVATE glfw glad stb_image 
 target_link_libraries(14_multiple_lights PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(15_assimp PRIVATE glfw glad stb_image glm::glm assimp )
 target_link_libraries(16_depth_testing PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(17_stencil_testing PRIVATE glfw glad stb_image glm::glm )
 
 target_compile_definitions(6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -159,5 +164,7 @@ target_compile_definitions(15_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE
 target_compile_definitions(15_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(16_depth_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(16_depth_testing PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(17_stencil_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(17_stencil_testing PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
