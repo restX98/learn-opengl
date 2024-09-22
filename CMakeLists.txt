@@ -131,6 +131,10 @@ add_executable(3_6_face_culling
   src/3_advanced_opengl/6_face_culling.cpp
 )
 
+add_executable(3_7_framebuffers
+  src/3_advanced_opengl/7_framebuffers.cpp
+)
+
 target_link_libraries(1_1_rectangle PRIVATE glfw glad )
 target_link_libraries(1_2_double_triangle PRIVATE glfw glad )
 target_link_libraries(1_3_double_triangle_multiple_VAO PRIVATE glfw glad )
@@ -153,6 +157,7 @@ target_link_libraries(3_3_stencil_testing PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_4_discard_fragments PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_5_blending PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_6_face_culling PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(3_7_framebuffers PRIVATE glfw glad stb_image glm::glm )
 
 target_compile_definitions(1_6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(1_7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -187,5 +192,7 @@ target_compile_definitions(3_5_blending PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOU
 target_compile_definitions(3_5_blending PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(3_6_face_culling PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(3_6_face_culling PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(3_7_framebuffers PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(3_7_framebuffers PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
