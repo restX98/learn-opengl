@@ -6,7 +6,7 @@
 void framebufferSizeCallback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow* window);
 
-const char* WINDOW_TITLE = "My first window :)";
+const char* WINDOW_TITLE = "Rectangle";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 

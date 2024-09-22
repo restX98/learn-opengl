@@ -15,7 +15,7 @@ void processInput(GLFWwindow* window);
 
 unsigned int createShaderProgram();
 
-const char* WINDOW_TITLE = "Two triangle";
+const char* WINDOW_TITLE = "Coordinate System";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 

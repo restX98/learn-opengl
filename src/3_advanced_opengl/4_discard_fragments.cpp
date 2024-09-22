@@ -20,7 +20,7 @@ void processInput(GLFWwindow* window);
 
 unsigned int loadTexture(char const* path);
 
-const char* WINDOW_TITLE = "Blending";
+const char* WINDOW_TITLE = "Discard Fragments";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 

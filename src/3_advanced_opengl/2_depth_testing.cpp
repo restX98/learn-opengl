@@ -19,7 +19,7 @@ void processInput(GLFWwindow* window);
 
 unsigned int loadTexture(char const* path);
 
-const char* WINDOW_TITLE = "Two triangle";
+const char* WINDOW_TITLE = "Depth Testing";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 

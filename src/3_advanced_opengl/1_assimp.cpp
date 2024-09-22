@@ -19,6 +19,7 @@ void processInput(GLFWwindow* window);
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
+const char* WINDOW_TITLE = "Assimp";
 
 // camera
 Camera camera(glm::vec3(0.0f, 0.0f, 3.0f));
@@ -44,7 +45,7 @@ int main() {
 
     // glfw window creation
     // --------------------
-  GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+  GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, WINDOW_TITLE, NULL, NULL);
   if (window == NULL) {
     std::cout << "Failed to create GLFW window" << std::endl;
     glfwTerminate();

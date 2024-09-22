@@ -8,7 +8,7 @@ void processInput(GLFWwindow* window);
 
 unsigned int createShaderProgram(bool isOrange);
 
-const char* WINDOW_TITLE = "Two triangle";
+const char* WINDOW_TITLE = "Double triangle different color";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 
