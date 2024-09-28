@@ -18,7 +18,7 @@ void processInput(GLFWwindow* window);
 
 unsigned int createShaderProgram();
 
-const char* WINDOW_TITLE = "Advanced GLSL: Vertex Shader";
+const char* WINDOW_TITLE = "Advanced GLSL: Uniform Buffers";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 

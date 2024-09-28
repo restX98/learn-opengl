@@ -12,7 +12,7 @@
 
 void processInput(GLFWwindow* window);
 
-const char* WINDOW_TITLE = "Advanced GLSL: Vertex Shader";
+const char* WINDOW_TITLE = "Geometry Shader";
 const unsigned int WINDOW_WIDTH = 800;
 const unsigned int WINDOW_HEIGHT = 600;
 
