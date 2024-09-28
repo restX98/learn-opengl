@@ -151,6 +151,10 @@ add_executable(3_9_advanced_glsl__uniform_buffers
   src/3_advanced_opengl/9_advanced_glsl__uniform_buffers.cpp
 )
 
+add_executable(3_10_0_geometry_shader
+  src/3_advanced_opengl/10_0_geometry_shader.cpp
+)
+
 target_link_libraries(1_1_rectangle PRIVATE glfw glad )
 target_link_libraries(1_2_double_triangle PRIVATE glfw glad )
 target_link_libraries(1_3_double_triangle_multiple_VAO PRIVATE glfw glad )
@@ -178,6 +182,7 @@ target_link_libraries(3_8_0_cubemaps PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_8_1_cubemaps_reflection PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_8_2_cubemaps_refraction PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_9_advanced_glsl__uniform_buffers PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(3_10_0_geometry_shader PRIVATE glfw glad stb_image glm::glm )
 
 target_compile_definitions(1_6_shaders PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(1_7_textures PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
@@ -222,5 +227,7 @@ target_compile_definitions(3_8_2_cubemaps_refraction PUBLIC SHADERS_PATH="${CMAK
 target_compile_definitions(3_8_2_cubemaps_refraction PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(3_9_advanced_glsl__uniform_buffers PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(3_9_advanced_glsl__uniform_buffers PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(3_10_0_geometry_shader PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(3_10_0_geometry_shader PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 
 include_directories(${PROJECT_SOURCE_DIR}/src/include)
