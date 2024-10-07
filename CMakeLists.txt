@@ -41,7 +41,7 @@ FetchContent_MakeAvailable(assimp)
 
 add_subdirectory(thirdparty/glad)
 add_subdirectory(thirdparty/stb_image)
-
+add_subdirectory(thirdparty/imgui)
 
 add_executable(1_1_rectangle
   src/1_getting_started/1_rectangle.cpp
@@ -105,6 +105,10 @@ add_executable(2_3_lighting_caster__spotlight
 
 add_executable(2_4_multiple_lights
   src/2_lighting/4_multiple_lights.cpp
+)
+
+add_executable(3_0_imgui
+  src/3_advanced_opengl/0_imgui.cpp
 )
 
 add_executable(3_1_assimp
@@ -187,6 +191,7 @@ target_link_libraries(2_3_lighting_caster__directional_light PRIVATE glfw glad s
 target_link_libraries(2_3_lighting_caster__point_light PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(2_3_lighting_caster__spotlight PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(2_4_multiple_lights PRIVATE glfw glad stb_image glm::glm )
+target_link_libraries(3_0_imgui PRIVATE glfw glad stb_image glm::glm assimp imgui )
 target_link_libraries(3_1_assimp PRIVATE glfw glad stb_image glm::glm assimp )
 target_link_libraries(3_2_depth_testing PRIVATE glfw glad stb_image glm::glm )
 target_link_libraries(3_3_stencil_testing PRIVATE glfw glad stb_image glm::glm )
@@ -225,6 +230,8 @@ target_compile_definitions(2_3_lighting_caster__spotlight PUBLIC SHADERS_PATH="$
 target_compile_definitions(2_3_lighting_caster__spotlight PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(2_4_multiple_lights PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(2_4_multiple_lights PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
+target_compile_definitions(3_0_imgui PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
+target_compile_definitions(3_0_imgui PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(3_1_assimp PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
 target_compile_definitions(3_1_assimp PUBLIC RESOURCES_PATH="${CMAKE_CURRENT_SOURCE_DIR}/resources/")
 target_compile_definitions(3_2_depth_testing PUBLIC SHADERS_PATH="${CMAKE_CURRENT_SOURCE_DIR}/src/shaders/")
