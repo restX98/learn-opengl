@@ -27,6 +27,15 @@ public:
     for (unsigned int i = 0; i < meshes.size(); i++)
       meshes[i].Draw(shader);
   }
+
+  std::vector<Mesh> getMeshes() {
+    return this->meshes;
+  }
+
+  std::vector<Texture> getTexturesLoaded() {
+    return this->textures_loaded;
+  }
+
 private:
     // model data
     // model data 
